@@ -1,0 +1,18 @@
+defaults: &defaults
+  adapter: postgresql
+  encoding: utf8
+  username: postgres
+  password: "postgres"
+  host: localhost
+
+test:
+  <<: *defaults
+  database: adv_test
+
+development:
+  <<: *defaults
+  database: adv_development
+
+production:
+  <<: *defaults
+  database: adv_production
